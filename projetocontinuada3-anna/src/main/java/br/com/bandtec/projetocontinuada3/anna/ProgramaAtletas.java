@@ -27,11 +27,11 @@ public class ProgramaAtletas extends javax.swing.JFrame {
             
         // CONEXÃO COM O BANCO DE DADOS
         BasicDataSource dataSource = new BasicDataSource();
-        dataSource.setDriverClassName("org.h2.Driver");
-        dataSource.setUrl("jdbc:h2:file:./meubanco");
-        dataSource.setUsername("sa");
-        dataSource.setPassword(""); 
-        
+        dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/atletas?useTimezone=true&serverTimezone=UTC");
+        dataSource.setUsername("root");
+        dataSource.setPassword("bandtec");
+
         jdbcTemplate = new JdbcTemplate(dataSource);
         
         }
